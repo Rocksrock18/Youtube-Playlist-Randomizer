@@ -1,5 +1,8 @@
-
+var videoList;
+var nextVideo;
+var index;
 var player;
+
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
       height: '390',
@@ -12,6 +15,13 @@ function onYouTubePlayerAPIReady() {
     });
 }
 
+function setVideoList(vl)
+{
+    videoList = vl;
+    index = 0;
+    nextVideo = videoList[index];
+}
+
 // autoplay video
 function onPlayerReady(event) {
     event.target.playVideo();
@@ -20,6 +30,9 @@ function onPlayerReady(event) {
 // when video ends
 function onPlayerStateChange(event) {        
     if(event.data === 0) {            
-        alert('done');
+        index++;
+        nextVideo = videoList[index];
+        var video = document.getElementById('player');
+        video.videoId = nextVideo;
     }
 }
