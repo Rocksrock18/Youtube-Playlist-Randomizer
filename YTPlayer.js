@@ -17,6 +17,7 @@ function onYouTubePlayerAPIReady() {
 
 function setVideoList(vl)
 {
+    console.log("Called!");
     videoList = vl;
     index = 0;
     nextVideo = videoList[index];
