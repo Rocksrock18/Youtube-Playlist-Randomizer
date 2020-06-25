@@ -22,7 +22,6 @@ function playNextVideo(vid)
 
 function setVideoList(vl)
 {
-    console.log("Called!");
     videoList = vl;
     listLength = videoList.length;
     index = 0;
