@@ -7,7 +7,14 @@ function Randomize()
         type: 'GET',
         url: link,
         success: function(data){
-            setVideoList(data);
+            var videos = [];
+            var titles = [];
+            for(var key in data) {
+                videos[videos.length] = key;
+                titles[titles.length] = data[key];              
+            }
+            setVideoList(videos);
+            setTitleList(titles);
         },
         error: function (jqXHR, error, errorThrown) {
             alert(jqXHR.responseText
