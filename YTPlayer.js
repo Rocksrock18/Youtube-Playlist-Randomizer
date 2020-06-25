@@ -16,9 +16,9 @@ function onYouTubePlayerAPIReady() {
     });
 }
 
-function checkInvalid()
+function checkInvalid(numVideos)
 {
-    if(videoList.length == 0)
+    if(numVideos == 0)
     {
         alert("No videos found in given playlist.");
     }
