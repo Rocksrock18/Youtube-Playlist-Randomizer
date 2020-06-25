@@ -13,9 +13,11 @@ function Randomize()
                 videos[videos.length] = key;
                 titles[titles.length] = data[key];              
             }
-            checkInvalid(titles.length);
-            setVideoList(videos);
-            setTitleList(titles);
+            if(!isInvalid(titles.length))
+            {
+                setVideoList(videos);
+                setTitleList(titles);
+            }
         },
         error: function (jqXHR, error, errorThrown) {
             alert(jqXHR.responseText
