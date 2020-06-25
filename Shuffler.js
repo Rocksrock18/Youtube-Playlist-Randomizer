@@ -15,6 +15,7 @@ function Randomize()
             }
             setVideoList(videos);
             setTitleList(titles);
+            checkInvalid();
         },
         error: function (jqXHR, error, errorThrown) {
             alert(jqXHR.responseText
