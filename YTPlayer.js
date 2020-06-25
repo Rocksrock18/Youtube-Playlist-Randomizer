@@ -16,6 +16,14 @@ function onYouTubePlayerAPIReady() {
     });
 }
 
+function checkInvalid()
+{
+    if(videoList.length == 0)
+    {
+        alert("No videos found in given playlist.");
+    }
+}
+
 function findIndexByID(vid)
 {
     for(var i = 0; i < videoList.length; i++)
