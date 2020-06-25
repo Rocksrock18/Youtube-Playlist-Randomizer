@@ -1,13 +1,13 @@
 var videoList;
 var nextVideo;
 var index;
+var listLength;
 var player;
 
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
       height: '390',
       width: '640',
-      videoId: '0Bmhjf0rKe8',
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange
@@ -15,12 +15,19 @@ function onYouTubePlayerAPIReady() {
     });
 }
 
+function playNextVideo(vid)
+{
+    player.loadVideoById(vid)
+}
+
 function setVideoList(vl)
 {
     console.log("Called!");
     videoList = vl;
+    listLength = videoList.length;
     index = 0;
     nextVideo = videoList[index];
+    playNextVideo(nextVideo);
 }
 
 // autoplay video
@@ -32,8 +39,14 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {        
     if(event.data === 0) {            
         index++;
-        nextVideo = videoList[index];
-        var video = document.getElementById('player');
-        video.videoId = nextVideo;
+        if(index != listLength)
+        {
+            nextVideo = videoList[index];
+            playNextVideo(nextVideo);
+        }
+        else
+        {
+            Randomize();
+        }
     }
 }
