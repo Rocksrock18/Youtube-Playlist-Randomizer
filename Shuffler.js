@@ -44,6 +44,6 @@ function Reshuffle()
         videos.splice(index, 1);
         titles.splice(index, 1);
     }
-    setVideoList(newVideoList);
     setTitleList(newTitleList);
+    setVideoList(newVideoList);
 }
