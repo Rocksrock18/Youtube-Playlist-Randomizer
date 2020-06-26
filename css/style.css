@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+/*general*/
+* {
+    font-family: Dosis;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+h1 {
+    width: 30vw;
+    text-align: center;
+}
+input {
+    margin: auto;
+    width: 70%;
+    margin-left: 3%;
+}
+
+button {
+    z-index: 2;
+    font-size: 3vw;
+    width: 100%;
+    padding: 0px 10px;
+    border: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 6%/25%;
+    background-color: #222222;
+}
+
+.WebPage {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      background-color: #222222;
+}
+
+.ControlPanel {
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 30vw;
+    max-height: 100vh;
+    margin-top: 5vh;
+}
+
+.ContentPanel {
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-left: 30vw;
+    width: 40vw;
+    max-height: 60vh;
+    margin-top: 5vh;
+}
+
+.InfoPanel {
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-left: 70vw;
+    width: 30vw;
+    max-height: 100vh;
+    margin-top: 5vh;
+}
+
+.PlaylistContainer {
+    display: table-cell;
+    vertical-align: middle;
+    width: 26vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 5vh;
+}
+
+.ButtonContainer {
+    margin: auto;
+    margin-top: 2vh;
+    width: 50%;
+}
