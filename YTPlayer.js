@@ -69,7 +69,7 @@ function playNextVideo(vid)
     player.loadVideoById(vid)
     var currVid = document.getElementById("currentvideolabel");
     var index = findIndexByID(vid);
-    currVid.innerHTML = "Current Video: " + index + ". " + titleList[index];
+    currVid.innerHTML = "Current Video: " + (index+1) + ". " + titleList[index];
 }
 
 function setVideoList(vl)
@@ -78,6 +78,7 @@ function setVideoList(vl)
     listLength = videoList.length;
     index = 0;
     nextVideo = videoList[index];
+    initializeQueue();
     playNextVideo(nextVideo);
 }
 
@@ -107,7 +108,6 @@ function destroyQueue()
 function setTitleList(tl)
 {
     titleList = tl;
-    initializeQueue();
 }
 
 // autoplay video
