@@ -152,6 +152,11 @@ p {
     border-width: 0.01vw;
 }
 
+.SmallButton {
+    margin: auto;
+    width: 40%;
+}
+
 #player {
     margin-left: 2vw;
     margin-right: 2vw;
