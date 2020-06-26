@@ -38,7 +38,6 @@ function GetTitles()
 
 function findIndexByID(vid)
 {
-    console.log(vid);
     for(var i = 0; i < videoList.length; i++)
     {
         var video = videoList[i];
@@ -66,10 +65,13 @@ function skipToVideo(e)
 
 function playNextVideo(vid)
 {
-    player.loadVideoById(vid)
-    var currVid = document.getElementById("currentvideolabel");
     var index = findIndexByID(vid);
-    currVid.innerHTML = "<b>Current Video:</b> " + (index+1) + ". " + titleList[index];
+    if(index != -1)
+    {
+        player.loadVideoById(vid);
+        var currVid = document.getElementById("currentvideolabel");
+        currVid.innerHTML = "<b>Current Video:</b>     " + (index+1) + ". " + titleList[index];
+    }
 }
 
 function setVideoList(vl)
