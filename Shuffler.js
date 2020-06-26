@@ -48,7 +48,6 @@ function Reshuffle()
 
 function Append()
 {
-    destroyQueue();
     var playlistID = document.getElementById('apl').value;
     var link = 'https://localhost:44321/api/values?playlistID='+playlistID;
     $.ajax({
@@ -65,6 +64,7 @@ function Append()
             }
             if(!isInvalid(count))
             {
+                destroyQueue();
                 setTitleList(titles);
                 setVideoList(videos);
                 Reshuffle();
