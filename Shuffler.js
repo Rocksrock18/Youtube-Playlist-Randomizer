@@ -1,6 +1,7 @@
 
 function Randomize()
 {
+    destroyQueue();
     var playlistID = document.getElementById('pl').value;
     var link = 'https://localhost:44321/api/values?playlistID='+playlistID;
     $.ajax({
