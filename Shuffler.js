@@ -48,6 +48,7 @@ function Reshuffle()
 
 function Append()
 {
+    destroyQueue();
     var playlistID = document.getElementById('apl').value;
     var link = 'https://localhost:44321/api/values?playlistID='+playlistID;
     console.log(link);
@@ -63,6 +64,7 @@ function Append()
                 titles[titles.length] = data[key];
                 count++;              
             }
+            console.log(count);
             if(!isInvalid(count))
             {
                 setTitleList(titles);
