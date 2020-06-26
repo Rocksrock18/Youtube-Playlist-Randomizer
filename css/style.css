@@ -30,6 +30,7 @@ hr {
   }
 
 input {
+    color: black;
     margin: auto;
     width: 18vw;
     margin-left: 3%;
