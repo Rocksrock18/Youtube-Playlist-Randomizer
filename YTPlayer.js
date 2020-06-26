@@ -113,7 +113,6 @@ function onPlayerStateChange(event) {
         }
         else
         {
-            destroyQueue();
             Randomize();
         }
     }
