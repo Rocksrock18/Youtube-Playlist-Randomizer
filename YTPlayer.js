@@ -69,7 +69,7 @@ function playNextVideo(vid)
     player.loadVideoById(vid)
     var currVid = document.getElementById("currentvideolabel");
     var index = findIndexByID(vid);
-    currVid.innerHTML = "Current Video: " + (index+1) + ". " + titleList[index];
+    currVid.innerHTML = "<b>Current Video:</b> " + (index+1) + ". " + titleList[index];
 }
 
 function setVideoList(vl)
