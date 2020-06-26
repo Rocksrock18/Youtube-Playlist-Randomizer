@@ -10,21 +10,27 @@
   <div class="WebPage">
     <div class="ControlPanel">
       <h1>Controls</h1>
+      <hr></hr>
+      <p>- Enter the playlist id for the playlist you would like to shuffle, then hit "Randomize".</p>
+      <p>- Don't like the order? Hit "Reshuffle" to change the order again.</p>
       <div class="PlaylistContainer">
         <label class="PlLabel">Playlist ID:</label>
         <input type="text" id="pl"></input>
       </div>
       <div class="ButtonContainer">
         <button onclick="Randomize()">Randomize</button>
+        <button onclick="Reshuffle()">Reshuffle</button>
       </div>
     </div>
 
     <div class="InfoPanel">
       <h1>Important Information</h1>
+      <hr></hr>
     </div>
 
     <div class="ContentPanel">
       <div id="player"></div>
+      <label id="currentvideolabel">Current Video:</label>
     </div>
     <div class="TitleList">
       <ol id="dynlist"></ol>
