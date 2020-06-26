@@ -3,7 +3,7 @@ function Randomize()
 {
     destroyQueue();
     var playlistID = document.getElementById('pl').value;
-    var link = 'https://localhost:44321/api/values?playlistID='+playlistID;
+    var link = 'https://youtubeplaylistrandomizer.azurewebsites.net/api/values?playlistID='+playlistID;
     $.ajax({
         type: 'GET',
         url: link,
@@ -49,7 +49,7 @@ function Reshuffle()
 function Append()
 {
     var playlistID = document.getElementById('apl').value;
-    var link = 'https://localhost:44321/api/values?playlistID='+playlistID;
+    var link = 'https://youtubeplaylistrandomizer.azurewebsites.net/api/values?playlistID='+playlistID;
     $.ajax({
         type: 'GET',
         url: link,
