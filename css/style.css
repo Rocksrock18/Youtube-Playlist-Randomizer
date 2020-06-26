@@ -82,7 +82,10 @@ button {
 }
 
 .TitleList {
-    max-height: 30vh;
+    height: 25vh;
+    margin-top: 70vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
 }
 
 #player {
