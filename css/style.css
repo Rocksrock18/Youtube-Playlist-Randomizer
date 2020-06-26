@@ -108,10 +108,16 @@ p {
 
 .TitleList {
     height: 25vh;
-    margin-top: 70vh;
     margin-left: 30vw;
     margin-right: 30vw;
     overflow-y: auto;
+}
+
+.VLabel {
+    height: 5vh;
+    margin-top: 65vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
 }
 
 .PlLabel {
