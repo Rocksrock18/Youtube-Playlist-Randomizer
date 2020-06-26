@@ -14,6 +14,12 @@ h1 {
     font-size: 3vw;
 }
 
+h2 {
+    width: 30vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
 hr {
     margin: auto;
     width: 90%;
@@ -56,10 +62,12 @@ p {
 }
 
 .WebPage {
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      background-color: #222222;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #222222;
 }
 
 .ControlPanel {
@@ -87,8 +95,18 @@ p {
     overflow-x: hidden;
     margin-left: 70vw;
     width: 30vw;
-    max-height: 100vh;
+    height: 70vh;
     margin-top: 5vh;
+}
+
+.FAQPanel {
+    overflow: auto;
+    overflow-x: hidden;
+    position: absolute;
+    margin-left: 70vw;
+    width: 30vw;
+    margin-top: 75vh;
+    margin-bottom: 5vh;
 }
 
 .PlaylistContainer {
@@ -108,7 +126,7 @@ p {
 }
 
 .TitleList {
-    height: 25vh;
+    max-height: 60vh;
     margin-left: 30vw;
     margin-right: 30vw;
     overflow-y: auto;
@@ -127,6 +145,11 @@ p {
 
 .VidListLabel {
     font-size: 1.4vw;
+}
+
+.SubtleHR {
+    margin-top: 2vh;
+    border-width: 0.01vw;
 }
 
 #player {
