@@ -7,24 +7,38 @@
 </head>
 
 <body>
-    <input type="text" id="pl" />
-    <button onclick="Randomize()"></button>
+  <div class="WebPage">
+    <div class="ControlPanel">
+      <h1>Controls</h1>
+      <div class="PlaylistContainer">
+        <label class="PlLabel">Playlist ID:</label>
+        <input type="text" id="pl"></input>
+      </div>
+      <div class="ButtonContainer">
+        <button onclick="Randomize()">Randomize</button>
+      </div>
+    </div>
 
-    <div id="player"></div>
+    <div class="InfoPanel">
+      <h1>Important Information</h1>
+    </div>
 
-    <div id="titlelist">
+    <div class="ContentPanel" id="player"></div>
+
+    <div class="ContentPanel" id="titlelist">
       <ol id="dynlist">
 
       </ol>
     </div>
+  </div>
 
-    <script src="https://www.youtube.com/player_api"></script>
+  <script src="https://www.youtube.com/player_api"></script>
 
-    <script src="YTPlayer.js"></script>
+  <script src="YTPlayer.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <script src="Shuffler.js"></script>
+  <script src="Shuffler.js"></script>
 </body>
 
 </html>
