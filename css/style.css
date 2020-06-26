@@ -30,6 +30,10 @@ button {
     background-color: #222222;
 }
 
+li {
+    padding-top: 1vh;
+}
+
 .WebPage {
       width: 100vw;
       height: 100vh;
@@ -86,9 +90,14 @@ button {
     margin-top: 70vh;
     margin-left: 30vw;
     margin-right: 30vw;
+    overflow-y: auto;
 }
 
 #player {
     height: 60vh;
     width: 40vw;
+}
+
+#dynlist {
+    padding-left: 2vw;
 }
