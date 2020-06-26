@@ -118,6 +118,10 @@ p {
     font-size: 1vw;
 }
 
+.VidListLabel {
+    font-size: 1.4vw;
+}
+
 #player {
     margin-left: 2vw;
     margin-right: 2vw;
