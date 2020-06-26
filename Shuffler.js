@@ -20,10 +20,8 @@ function Randomize()
                 setVideoList(videos);
             }
         },
-        error: function (jqXHR, error, errorThrown) {
-            alert(jqXHR.responseText
-            +"\n" + error
-            +"\n" + errorThrown);
+        error: function () {
+            alert("The connection to the server failed. Check permissions and try again.");
         }
     });
 }
@@ -46,4 +44,33 @@ function Reshuffle()
     }
     setTitleList(newTitleList);
     setVideoList(newVideoList);
+}
+
+function Append()
+{
+    var playlistID = document.getElementById('apl').value;
+    var link = 'https://localhost:44321/api/values?playlistID='+playlistID;
+    $.ajax({
+        type: 'GET',
+        url: link,
+        success: function(data){
+            var videos = GetVideos();
+            var titles = GetTitles();
+            var count = 0;
+            for(var key in data) {
+                videos[videos.length] = key;
+                titles[titles.length] = data[key];
+                count++;              
+            }
+            if(!isInvalid(count))
+            {
+                setTitleList(titles);
+                setVideoList(videos);
+                Reshuffle();
+            }
+        },
+        error: function () {
+            alert("The connection to the server failed. Check permissions and try again.");
+        }
+    });
 }
