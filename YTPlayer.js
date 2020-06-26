@@ -128,7 +128,7 @@ function onPlayerStateChange(event) {
         }
         else
         {
-            Randomize();
+            Reshuffle();
         }
     }
 }
