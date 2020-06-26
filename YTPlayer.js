@@ -1,5 +1,5 @@
-var videoList;
-var titleList;
+var videoList = [];
+var titleList = [];
 var nextVideo;
 var index;
 var listLength;
