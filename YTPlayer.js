@@ -26,8 +26,19 @@ function isInvalid(numVideos)
     return false;
 }
 
+function GetVideos()
+{
+    return videoList;
+}
+
+function GetTitles()
+{
+    return titleList;
+}
+
 function findIndexByID(vid)
 {
+    console.log(vid);
     for(var i = 0; i < videoList.length; i++)
     {
         var video = videoList[i];
@@ -42,14 +53,13 @@ function findIndexByID(vid)
 function skipToVideo(e)
 {
     var vid = e.target.id;
-    var vidIndex = findIndexByID(vid);
-    if(vidIndex == -1)
+    index = findIndexByID(vid);
+    if(index == -1)
     {
         alert("Error: Video not found");
     }
     else
     {
-        index = vidIndex;
         playNextVideo(vid);
     }
 }
@@ -57,6 +67,9 @@ function skipToVideo(e)
 function playNextVideo(vid)
 {
     player.loadVideoById(vid)
+    var currVid = document.getElementById("currentvideolabel");
+    var index = findIndexByID(vid);
+    currVid.innerHTML = "Current Video: " + index + ". " + titleList[index];
 }
 
 function setVideoList(vl)
