@@ -16,8 +16,8 @@ function Randomize()
             }
             if(!isInvalid(titles.length))
             {
-                setVideoList(videos);
                 setTitleList(titles);
+                setVideoList(videos);
             }
         },
         error: function (jqXHR, error, errorThrown) {
@@ -40,7 +40,7 @@ function Reshuffle()
     {
         var index = Math.floor(Math.random() * videos.length);
         newVideoList[i] = videos[index];
-        newTitleList[i] = titles[i];
+        newTitleList[i] = titles[index];
         videos.splice(index, 1);
         titles.splice(index, 1);
     }
