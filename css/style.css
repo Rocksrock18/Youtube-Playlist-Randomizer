@@ -52,7 +52,7 @@ button {
     overflow-x: hidden;
     margin-left: 30vw;
     width: 40vw;
-    max-height: 60vh;
+    max-height: 100vh;
     margin-top: 5vh;
 }
 
@@ -79,4 +79,12 @@ button {
     margin: auto;
     margin-top: 2vh;
     width: 50%;
+}
+
+.TitleList {
+    max-height: 30vh;
+}
+
+#player {
+    height: 60vh;
 }
