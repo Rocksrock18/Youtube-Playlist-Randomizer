@@ -67,6 +67,10 @@ li:hover {
     cursor: pointer;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .WebPage {
     overflow: auto;
     overflow-x: hidden;
