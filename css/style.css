@@ -166,6 +166,7 @@ li:hover {
 
 .ExampleLabel:hover {
     cursor: pointer;
+    color: mediumspringgreen;
 }
 
 .CurrentlyPlaying {
