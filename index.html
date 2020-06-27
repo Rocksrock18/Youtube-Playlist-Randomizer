@@ -11,7 +11,8 @@
     <div class="ControlPanel">
       <h1>Controls</h1>
       <hr></hr>
-      <p>- Enter the playlist id for the playlist you would like to shuffle, then hit "Randomize".</p>
+      <p>- Enter the playlist id for the playlist you would like to shuffle, then hit "Randomize".
+        <b> It'll take a few seconds to load the playlist.</b></p>
       <p>- Don't like the order? Hit "Reshuffle" to change the order again.</p>
       <div class="PlaylistContainer">
         <label class="PlLabel">Playlist ID:</label>
@@ -38,40 +39,37 @@
     <div class="InfoPanel">
       <h1>Important Information</h1>
       <hr></hr>
-      <p>Using YouTube's API requires an API key, which has a limited number of daily uses. An overload of requests leads to
-        authorization failure, meaning you wouldn't be able to view anything at all. Usually this isn't a problem, but recently 
-        authorization failure started happening on every request.
+      <p>Only the first 100 videos of a given playlist will be generated. This means if you want to shuffle a playlist with more,
+        you'll need to split the playlist into 100 video chunks and append them. Youtube doesn't currently have a built in way to 
+        split playlists, but copying a playlist into a new one and deleting the first 100 videos will do the trick. 
+        This is of course tedious, but only needs to be done once. 
       </p>
-      <p>Luckily, there is a workaround: we can web scrape the playlist source page to find the videos in the playlist.
-        This works great, but only the first 100 videos of the playlist are actually loaded in to the page source.
-        In other words, we can only retrieve the first 100 videos of a given playlist.
-      </p>
-      <p>This, too, has a workaround: since we can only get 100 videos at a time, we can split the playlist into 100 video
-        chunks and append them. Youtube doesn't currently have a built in way to split playlists, but copying a playlist into a new
-        one and deleting the first 100 videos will do the trick. This is of course tedious, but only needs to be done once. 
-      </p>
-    </div>
-    <div class="FAQPanel">
-      <h2>FAQ</h2>
-      <hr></hr>
-      <p>Why does it tell me there are no videos in the playlist?</p>
-      <p>It's likely that you entered an invalid playlist id; copy paste the id from your playlist page and try again. Also, keep in 
-        mind that playlists set to private are not accessible. Only public or unlisted playlists can be played.</p>
-      <hr class="SubtleHR"></hr>
-      <p>It keeps telling me the server connection failed. How do I fix this?</p>
-      <p>If the server is down, the only thing you can do is wait, unfortunately. This will also happen if you run this site
-        from anywhere other than rocksrock18.github.io, due to CORS.</p>
-      <hr class="SubtleHR"></hr>
-      <p>I want to skip to a certain video in the playlist. How can I do this?</p>
-      <p>Click on the song you want to skip to in the video list. This will automatically skip to that place in the
-        playlist, regardless of where you were previously.</p>
-      <hr class="SubtleHR"></hr>
-      <p>How can I search for a specefic video?</p>
-      <p>CTRL+F (or equivalent). Then enter the title of the video you want.</p>
-      <hr class="SubtleHR"></hr>
-      <p>What happens when the playlist ends?</p>
-      <p>The website will automatically reshuffle the current playlist and start from the beginning. If you want to
-        play a new playlist, you'll have to enter the new id and hit "Randomize".</p>
+      <div class="FAQPanel">
+        <h2>FAQ</h2>
+        <hr></hr>
+        <p>What is a playlist ID? How can I find it?</p>
+        <p>Youtube gives every playlist a unique ID upon creation. To find it, navigate to the youtube page of your playlist. 
+          At the end of the url, you should see "list=[playlistID]". <label class="ExampleLabel" onclick="Example()">Show me an example</label></p>
+        <hr class="SubtleHR"></hr>
+        <p>Why does it tell me there are no videos in the playlist?</p>
+        <p>It's likely that you entered an invalid playlist id; copy paste the id from your playlist page and try again. Also, keep in 
+          mind that playlists set to private are not accessible. Only public or unlisted playlists can be played.</p>
+        <hr class="SubtleHR"></hr>
+        <p>It keeps telling me the server connection failed. How do I fix this?</p>
+        <p>If the server is down, the only thing you can do is wait, unfortunately. This will also happen if you run this site
+          from anywhere other than rocksrock18.github.io, due to CORS.</p>
+        <hr class="SubtleHR"></hr>
+        <p>I want to skip to a certain video in the playlist. How can I do this?</p>
+        <p>Click on the song you want to skip to in the video list. This will automatically jump to that spot in the
+          playlist, regardless of where you were previously.</p>
+        <hr class="SubtleHR"></hr>
+        <p>How can I search for a specefic video?</p>
+        <p>CTRL+F (or equivalent). Then enter the title of the video you want.</p>
+        <hr class="SubtleHR"></hr>
+        <p>What happens when the playlist ends?</p>
+        <p>The website will automatically reshuffle the current playlist and start from the beginning. If you want to
+          play a new playlist, you'll have to enter the new id and hit "Randomize".</p>
+      </div>
     </div>
 
     <div class="ContentPanel">
