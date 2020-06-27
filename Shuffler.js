@@ -11,7 +11,7 @@ function Randomize()
             var videos = [];
             var titles = [];
             for(var key in data) {
-                if(!(key in videos))
+                if(!(videos.includes(key))
                 {
                     videos[videos.length] = key;
                     titles[titles.length] = data[key];   
@@ -62,7 +62,7 @@ function Append()
             var titles = GetTitles();
             var count = 0;
             for(var key in data) {
-                if(!(key in videos))
+                if(!(videos.includes(key)))
                 {
                     videos[videos.length] = key;
                     titles[titles.length] = data[key];
