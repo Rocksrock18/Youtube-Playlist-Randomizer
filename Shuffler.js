@@ -11,7 +11,7 @@ function Randomize()
             var videos = [];
             var titles = [];
             for(var key in data) {
-                if(!(videos.includes(key))
+                if(!(videos.includes(key)))
                 {
                     videos[videos.length] = key;
                     titles[titles.length] = data[key];   
