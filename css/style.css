@@ -62,6 +62,11 @@ p {
     font-size: 1vw;
 }
 
+li:hover {
+    background-color:  MediumSpringGreen;
+    cursor: pointer;
+}
+
 .WebPage {
     overflow: auto;
     overflow-x: hidden;
@@ -92,11 +97,9 @@ p {
 
 .InfoPanel {
     position: absolute;
-    overflow: auto;
-    overflow-x: hidden;
     margin-left: 70vw;
     width: 30vw;
-    height: 70vh;
+    height: 170vh;
     margin-top: 5vh;
 }
 
@@ -104,9 +107,8 @@ p {
     overflow: auto;
     overflow-x: hidden;
     position: absolute;
-    margin-left: 70vw;
     width: 30vw;
-    margin-top: 75vh;
+    margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
@@ -156,6 +158,18 @@ p {
 .SmallButton {
     margin: auto;
     width: 40%;
+}
+
+.ExampleLabel {
+    color: #ff745c;
+}
+
+.ExampleLabel:hover {
+    cursor: pointer;
+}
+
+.CurrentlyPlaying {
+    color: #5cd3ff;
 }
 
 #player {
