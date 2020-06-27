@@ -26,6 +26,9 @@ However, recently authorization failure started happening on every request. This
 1. The site takes in a playlist id, and generates the source page of the playlist entered.
 2. The source page is parsed in order to find the video id's and titles of each video in the playlist.
    - By default, the source page only generates the first 100 videos in the playlist.
+3. Each video is compiled into a list and then placed in a random order.
+   - The order can be reshuffled at any time.
+4. Additional playlists can be appended to the list, and the order will be shuffled again.
 
 ## Built With
 * HTML, CSS, JavaScript
