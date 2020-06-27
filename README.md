@@ -7,8 +7,7 @@ Site can be found here: https://rocksrock18.github.io/Youtube-Playlist-Randomize
 ## The Problem with YouTube
 
 YouTube has a built in "shuffle" feature already. **The problem is, it doesn't work.**
-
-Not only will videos repeat multiple times, but some videos never get played at all.
+- Not only will videos repeat multiple times, but some videos never get played at all.
 
 This site will play every video in the playlist once before randomizing the order again.
 
