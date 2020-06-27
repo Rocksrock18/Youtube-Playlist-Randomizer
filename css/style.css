@@ -63,7 +63,7 @@ p {
 }
 
 li:hover {
-    background-color:  MediumSpringGreen;
+    color:  MediumSpringGreen;
     cursor: pointer;
 }
 
