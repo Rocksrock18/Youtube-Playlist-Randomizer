@@ -11,8 +11,11 @@ function Randomize()
             var videos = [];
             var titles = [];
             for(var key in data) {
-                videos[videos.length] = key;
-                titles[titles.length] = data[key];              
+                if(!(key in videos))
+                {
+                    videos[videos.length] = key;
+                    titles[titles.length] = data[key];   
+                }         
             }
             if(!isInvalid(titles.length))
             {
@@ -59,9 +62,12 @@ function Append()
             var titles = GetTitles();
             var count = 0;
             for(var key in data) {
-                videos[videos.length] = key;
-                titles[titles.length] = data[key];
-                count++;              
+                if(!(key in videos))
+                {
+                    videos[videos.length] = key;
+                    titles[titles.length] = data[key];
+                    count++;  
+                }        
             }
             if(!isInvalid(count))
             {
