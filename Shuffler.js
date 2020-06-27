@@ -22,6 +22,9 @@ function Randomize()
                 setTitleList(titles);
                 setVideoList(videos);
             }
+            else{
+                initializeQueue();
+            }
         },
         error: function () {
             alert("The connection to the server failed. Check permissions and try again.");
