@@ -78,10 +78,10 @@ function playNextVideo(vid)
 function ChangeCurrentVideo(vid)
 {
     var newVid = document.getElementById(vid);
-    var oldVid = document.getElementsByClassName("CurrentlyPlaying");
-    if(oldVid != null)
+    var oldVid = document.getElementsByClassName("CurrentlyPlaying")[0];
+    if(oldVid != undefined)
     {
-        oldVid[0].classlist.remove("CurrentlyPlaying");
+        oldVid.classList.remove("CurrentlyPlaying");
     }
     newVid.classList.add("CurrentlyPlaying");
 }
