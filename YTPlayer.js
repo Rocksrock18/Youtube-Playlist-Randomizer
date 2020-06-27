@@ -71,7 +71,19 @@ function playNextVideo(vid)
         player.loadVideoById(vid);
         var currVid = document.getElementById("currentvideolabel");
         currVid.innerHTML = "<b>Current Video:</b>     " + (index+1) + ". " + titleList[index];
+        ChangeCurrentVideo(vid);
     }
+}
+
+function ChangeCurrentVideo(vid)
+{
+    var newVid = document.getElementById(vid);
+    var oldVid = document.getElementsByClassName("CurrentlyPlaying");
+    if(oldVid != null)
+    {
+        oldVid0[0].classlist.remove("CurrentlyPlaying");
+    }
+    newVid.classList.add("CurrentlyPlaying");
 }
 
 function setVideoList(vl)
@@ -110,6 +122,11 @@ function destroyQueue()
 function setTitleList(tl)
 {
     titleList = tl;
+}
+
+function Example()
+{
+    alert("Here's an example url: https://www.youtube.com/watch?v=2TgO-tN5wAM&list=PLeGo95B03F9swhmyGh017IR_2FfU6nSmr\n\nPlaylist ID: PLeGo95B03F9swhmyGh017IR_2FfU6nSmr");
 }
 
 // autoplay video
