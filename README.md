@@ -6,7 +6,7 @@ Site can be found here: https://rocksrock18.github.io/Youtube-Playlist-Randomize
 
 ## The problem with YouTube
 
-YouTube has a built in "shuffle" feature already. **The problem is, it doesn't work.
+YouTube has a built in "shuffle" feature already. **The problem is, it doesn't work.**
 
 
 
