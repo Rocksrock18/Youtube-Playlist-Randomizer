@@ -20,7 +20,7 @@ function isInvalid(numVideos)
 {
     if(numVideos == 0)
     {
-        alert("No videos found in given playlist.");
+        alert("Either no videos found in given playlist, or every video already exists in current playlist.");
         return true;
     }
     return false;
