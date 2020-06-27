@@ -81,7 +81,7 @@ function ChangeCurrentVideo(vid)
     var oldVid = document.getElementsByClassName("CurrentlyPlaying");
     if(oldVid != null)
     {
-        oldVid0[0].classlist.remove("CurrentlyPlaying");
+        oldVid[0].classlist.remove("CurrentlyPlaying");
     }
     newVid.classList.add("CurrentlyPlaying");
 }
