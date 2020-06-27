@@ -23,11 +23,13 @@ However, recently authorization failure started happening on every request. This
 
 ## How it works
 
-
+1. The site takes in a playlist id, and generates the source page of the playlist entered.
+2. The source page is parsed in order to find the video id's and titles of each video in the playlist.
+- By default, the source page only generates the first 100 videos in the playlist.
 
 ## Built With
 * HTML, CSS, JavaScript
-* Github text editor + Notepad
+* Visual Studio Code
 
 ## Author
 Jacob Maxson
