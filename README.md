@@ -38,8 +38,8 @@ If a playlist has more than 100 videos in it, only the first 100 will be generat
 * YouTube does not currently have a way to easily split playlists, so this will have to be done manually.
 
 ## Built With
-* HTML, CSS, JavaScript
-* Visual Studio Code
+* Visual Studio (Back-end)
+* Visual Studio Code (Front-end)
 
 ## Author
 Jacob Maxson
