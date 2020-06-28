@@ -2,7 +2,6 @@ var busy = false;
 
 function Randomize()
 {
-    console.log("Busy: " + busy);
     if(!busy)
     {
         busy = true;
@@ -29,8 +28,8 @@ function Randomize()
                     setVideoList(videos);
                 }
                 else{
-                    resetCurrentVid();
                     initializeQueue();
+                    resetCurrentVid();
                 }
             },
             error: function () {
@@ -68,7 +67,6 @@ function Reshuffle()
 
 function Append()
 {
-    console.log("Busy: " + busy);
     if(!busy)
     {
         busy = true;
@@ -98,8 +96,8 @@ function Append()
                     Reshuffle();
                 }
                 else{
-                    resetCurrentVid();
                     initializeQueue();
+                    resetCurrentVid();
                 }
             },
             error: function () {
