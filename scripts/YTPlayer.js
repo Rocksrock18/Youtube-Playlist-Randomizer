@@ -4,6 +4,7 @@ var nextVideo;
 var index;
 var listLength;
 var player;
+var prevIndex;
 
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
@@ -96,6 +97,16 @@ function setVideoList(vl)
     playNextVideo(nextVideo);
 }
 
+function resetCurrentVid()
+{
+    var vid = videoList[prevIndex];
+    if(vid != undefined)
+    {
+        var listElement = document.getElementById(vid);
+        listElement.classList.add("CurrentlyPlaying");
+    }
+}
+
 function initializeQueue()
 {
     var ol = document.getElementById("dynlist");
@@ -111,6 +122,7 @@ function initializeQueue()
 
 function destroyQueue()
 {
+    prevIndex = index;
     var ol = document.getElementById("dynlist");
     for(var i = 0; i < videoList.length; i++)
     {
