@@ -2,6 +2,7 @@ var busy = false;
 
 function Randomize()
 {
+    console.log("Busy: " + busy);
     if(!busy)
     {
         busy = true;
@@ -12,6 +13,7 @@ function Randomize()
             type: 'GET',
             url: link,
             success: function(data){
+                busy = false;
                 var videos = [];
                 var titles = [];
                 for(var key in data) {
@@ -32,10 +34,10 @@ function Randomize()
                 }
             },
             error: function () {
+                busy = false;
                 alert("The connection to the server failed. Check permissions and try again.");
             }
         });
-        busy = false;
     }
 }
 
@@ -66,6 +68,7 @@ function Reshuffle()
 
 function Append()
 {
+    console.log("Busy: " + busy);
     if(!busy)
     {
         busy = true;
@@ -76,6 +79,7 @@ function Append()
             type: 'GET',
             url: link,
             success: function(data){
+                busy = false;
                 var videos = GetVideos();
                 var titles = GetTitles();
                 var count = 0;
@@ -99,9 +103,9 @@ function Append()
                 }
             },
             error: function () {
+                busy = false;
                 alert("The connection to the server failed. Check permissions and try again.");
             }
         });
-        busy = false;
     }
 }
