@@ -63,12 +63,14 @@ p {
 }
 
 li:hover {
-    color:  mediumspringgreen;
+    color:  MediumSpringGreen;
     cursor: pointer;
 }
 
 button:hover {
     cursor: pointer;
+    border-color: #ff745c;
+    color: #ff745c;
 }
 
 .WebPage {
