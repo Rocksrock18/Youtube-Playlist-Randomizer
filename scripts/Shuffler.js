@@ -68,9 +68,9 @@ function Append()
                 if(!(videos.includes(key)))
                 {
                     videos[videos.length] = key;
-                    titles[titles.length] = data[key];  
-                }
-                count++;        
+                    titles[titles.length] = data[key];
+                    count++;  
+                }       
             }
             if(!isInvalid(count))
             {
