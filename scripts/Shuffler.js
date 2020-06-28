@@ -27,6 +27,7 @@ function Randomize()
                     setVideoList(videos);
                 }
                 else{
+                    resetCurrentVid();
                     initializeQueue();
                 }
             },
@@ -93,6 +94,7 @@ function Append()
                     Reshuffle();
                 }
                 else{
+                    resetCurrentVid();
                     initializeQueue();
                 }
             },
