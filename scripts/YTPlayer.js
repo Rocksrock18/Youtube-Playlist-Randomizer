@@ -138,7 +138,7 @@ function setTitleList(tl)
 
 function Example()
 {
-    alert("Here's an example url: https://www.youtube.com/watch?v=2TgO-tN5wAM&list=PLeGo95B03F9swhmyGh017IR_2FfU6nSmr\n\nPlaylist ID: PLeGo95B03F9swhmyGh017IR_2FfU6nSmr");
+    alert("Here's an example url: https://www.youtube.com/playlist?list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg\n\nPlaylist ID: PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg");
 }
 
 // autoplay video
