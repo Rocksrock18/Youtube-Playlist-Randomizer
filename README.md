@@ -37,6 +37,14 @@ If a playlist has more than 100 videos in it, only the first 100 will be generat
 * By splitting the large playlists into 100 video chunks, each additional playlist can be appended until every video is in the mix.
 * YouTube does not currently have a way to easily split playlists, so this will have to be done manually.
 
+## Accessability
+
+Certain playlists/videos cannot be accessed due to their privacy level. Any playlist that is private,
+or that has a private video in it, cannot be played.
+
+* **Note:** Sometimes YouTube will auto-generate playlists for a user. These are not recognized as "official" playlists, and hence cannot
+be accessed.
+
 ## Built With
 * Visual Studio (Back-end)
 * Visual Studio Code (Front-end)
