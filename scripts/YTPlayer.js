@@ -19,7 +19,7 @@ function onYouTubePlayerAPIReady() {
 
 function isInvalid(numVideos)
 {
-    if(numVideos == 0)
+    if(numVideos === 0)
     {
         alert("Either no videos were in the given playlist, or all videos already exist in the current one.");
         return true;
