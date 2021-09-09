@@ -3,6 +3,8 @@ import {destroyQueue, setTitleList, setVideoList, playNextVideo} from '../script
 
 export function SetCookie(key, value)
 {
+    console.log("In set cookie");
+    console.log(value);
     Cookies.set(key, JSON.stringify(value));
 }
 
