@@ -141,7 +141,7 @@ export function setTitleList(tl)
     SetCookie("titles", tl)
 }
 
-function Example()
+export function Example()
 {
     alert("Here's an example url: https://www.youtube.com/playlist?list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg\n\nPlaylist ID: PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg");
 }
@@ -166,3 +166,4 @@ function onPlayerStateChange(event) {
         }
     }
 }
+window.Example = Example
