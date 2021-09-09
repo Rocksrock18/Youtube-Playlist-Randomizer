@@ -66,6 +66,8 @@ export function Append()
     if(!busy)
     {
         busy = true;
+        var videos = GetVideos();
+        var titles = GetTitles();
         destroyQueue();
         var url = document.getElementById('apl').value;
         var link = 'https://yt-playlist-randomizer.herokuapp.com/api?url='+url;
@@ -74,8 +76,8 @@ export function Append()
             url: link,
             success: function(data){
                 busy = false;
-                var videos = GetVideos();
-                var titles = GetTitles();
+                console.log(videos)
+                console.log(titles)
                 var new_vids = data["videos"];
                 var new_titles = data["titles"];
                 var count = 0;
