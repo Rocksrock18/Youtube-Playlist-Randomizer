@@ -1,3 +1,4 @@
+import {SetCookie, ReadCookie} from 'CookieManager.js';
 var videoList = [];
 var titleList = [];
 var nextVideo;
