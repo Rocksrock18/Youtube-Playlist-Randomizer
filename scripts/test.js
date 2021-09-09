@@ -7,5 +7,6 @@ function onYouTubePlayerAPIReady() {
         'onStateChange': onPlayerStateChange
       }
     });
-  window.player = player
+    window.player = player;
+    console.log("test");
 }
