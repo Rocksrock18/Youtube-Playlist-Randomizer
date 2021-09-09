@@ -21,3 +21,5 @@ function ResumePlay()
 }
 
 ResumePlay();
+
+export {ResumePlay, SetCookie, ReadCookie};
