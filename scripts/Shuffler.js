@@ -13,15 +13,8 @@ function Randomize()
             url: link,
             success: function(data){
                 busy = false;
-                var videos = [];
-                var titles = [];
-                for(var key in data) {
-                    if(!(videos.includes(key)))
-                    {
-                        videos[videos.length] = key;
-                        titles[titles.length] = data[key];   
-                    }         
-                }
+                var videos = data["videos"];
+                var titles = data["titles"];
                 if(!isInvalid(titles.length))
                 {
                     setTitleList(titles);
