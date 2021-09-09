@@ -127,7 +127,8 @@ export function setTitleList(tl)
     titleList = tl;
     console.log("Setting cookie");
     console.log(tl);
-    SetCookie("titles", tl)
+    SetCookie("titles", tl);
+    console.log(ReadCookie("titles"))
 }
 
 export function Example()
