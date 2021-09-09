@@ -30,13 +30,6 @@ However, recently authorization failure started happening on every request. This
    - The order can be reshuffled at any time.
 4. Additional playlists can be appended to the list, and the order will be shuffled again.
 
-### Working with Large Playlists
-
-If a playlist has more than 100 videos in it, only the first 100 will be generated. **Luckily, there is a workaround.**
-
-* By splitting the large playlists into 100 video chunks, each additional playlist can be appended until every video is in the mix.
-* YouTube does not currently have a way to easily split playlists, so this will have to be done manually.
-
 ## Accessibility
 
 Certain playlists/videos cannot be accessed due to their privacy level. Any playlist that is **private**,
