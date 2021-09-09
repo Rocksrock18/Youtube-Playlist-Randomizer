@@ -80,6 +80,7 @@ function ChangeCurrentVideo(vid)
 {
     var newVid = document.getElementById(vid);
     var oldVid = document.getElementsByClassName("CurrentlyPlaying")[0];
+    SetCookie("id", vid)
     if(oldVid != undefined)
     {
         oldVid.classList.remove("CurrentlyPlaying");
@@ -90,6 +91,7 @@ function ChangeCurrentVideo(vid)
 function setVideoList(vl)
 {
     videoList = vl;
+    SetCookie("videos", vl)
     listLength = videoList.length;
     index = 0;
     nextVideo = videoList[index];
@@ -134,6 +136,7 @@ function destroyQueue()
 function setTitleList(tl)
 {
     titleList = tl;
+    SetCookie("titles", tl)
 }
 
 function Example()
