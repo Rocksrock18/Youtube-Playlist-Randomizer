@@ -1,4 +1,3 @@
-import Cookies from '../js.cookie.mjs'
 
 function SetCookie(key, value)
 {
@@ -21,5 +20,4 @@ function ResumePlay()
 }
 
 ResumePlay();
-
-export {ResumePlay, SetCookie, ReadCookie};
+console.log(Cookies.get())
