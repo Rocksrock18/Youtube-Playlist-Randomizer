@@ -5,6 +5,8 @@ export function SetCookie(key, value)
 {
     console.log("In set cookie");
     console.log(value);
+    console.log(key);
+    console.log(ReadCookie(key));
     Cookies.remove(key);
     Cookies.set(key, JSON.stringify(value));
 }
