@@ -1,5 +1,6 @@
 import {SetCookie, ReadCookie} from '../scripts/CookieManager.js';
 import {Reshuffle} from '../scripts/Shuffler.js';
+import YT from 'https://www.youtube.com/player_api';
 var videoList = [];
 var titleList = [];
 var nextVideo;
@@ -166,4 +167,4 @@ function onPlayerStateChange(event) {
         }
     }
 }
-window.Example = Example
+window.Example = Example;
