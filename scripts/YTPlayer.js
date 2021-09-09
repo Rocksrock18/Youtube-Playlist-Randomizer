@@ -122,13 +122,13 @@ export function destroyQueue()
     }
 }
 
-export function setTitleList(tl)
+export function setTitleList(t_list)
 {
-    titleList = tl;
+    titleList = t_list;
     console.log("Setting cookie");
-    console.log(tl);
-    SetCookie('titles', tl);
-    console.log(ReadCookie('titles'))
+    console.log(t_list);
+    SetCookie("titles", t_list);
+    console.log(ReadCookie("titles"))
 }
 
 export function Example()
