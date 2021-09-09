@@ -18,7 +18,7 @@ function onYouTubePlayerAPIReady() {
     });
 }
 
-function isInvalid(numVideos)
+export function isInvalid(numVideos)
 {
     if(numVideos === 0)
     {
@@ -65,7 +65,7 @@ function skipToVideo(e)
     }
 }
 
-function playNextVideo(vid)
+export function playNextVideo(vid)
 {
     var index = findIndexByID(vid);
     if(index != -1)
@@ -89,7 +89,7 @@ function ChangeCurrentVideo(vid)
     newVid.classList.add("CurrentlyPlaying");
 }
 
-function setVideoList(vl)
+export function setVideoList(vl)
 {
     videoList = vl;
     SetCookie("videos", vl)
@@ -100,7 +100,7 @@ function setVideoList(vl)
     playNextVideo(nextVideo);
 }
 
-function resetCurrentVid()
+export function resetCurrentVid()
 {
     var vid = videoList[prevIndex];
     if(vid != undefined)
@@ -110,7 +110,7 @@ function resetCurrentVid()
     }
 }
 
-function initializeQueue()
+export function initializeQueue()
 {
     var ol = document.getElementById("dynlist");
     for(var i = 0; i < titleList.length; i++)
@@ -123,7 +123,7 @@ function initializeQueue()
     }
 }
 
-function destroyQueue()
+export function destroyQueue()
 {
     prevIndex = index;
     var ol = document.getElementById("dynlist");
@@ -134,7 +134,7 @@ function destroyQueue()
     }
 }
 
-function setTitleList(tl)
+export function setTitleList(tl)
 {
     titleList = tl;
     SetCookie("titles", tl)
