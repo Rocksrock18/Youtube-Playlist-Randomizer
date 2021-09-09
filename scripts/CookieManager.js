@@ -19,7 +19,7 @@ export function ReadCookie(key)
 export function ResumePlay()
 {
     var vl = ReadCookie("videos");
-    var tl = ReadCookie("titles");
+    var tl = ReadCookie("big_test");
     var current_id = ReadCookie("id");
     console.log(vl)
     console.log(tl)
