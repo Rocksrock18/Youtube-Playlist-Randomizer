@@ -99,6 +99,8 @@ export function Append()
                     initializeQueue();
                     resetCurrentVid();
                 }
+                console.log(videos)
+                console.log(titles)
             },
             error: function () {
                 busy = false;
