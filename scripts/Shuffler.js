@@ -41,9 +41,9 @@ export function Reshuffle()
     if(!busy)
     {
         busy = true;
-        destroyQueue();
         var videos = GetVideos();
         var titles = GetTitles();
+        destroyQueue();
         var newVideoList = [];
         var newTitleList = [];
         var numVideos = videos.length;
@@ -55,6 +55,7 @@ export function Reshuffle()
             videos.splice(index, 1);
             titles.splice(index, 1);
         }
+        console.log(newTitleList);
         setTitleList(newTitleList);
         setVideoList(newVideoList);
         busy = false;
@@ -76,14 +77,12 @@ export function Append()
             url: link,
             success: function(data){
                 busy = false;
-                console.log(videos)
-                console.log(titles)
+                console.log(titles);
                 var new_vids = data["videos"];
                 var new_titles = data["titles"];
-                console.log(new_vids)
-                console.log(new_titles)
+                console.log(new_titles);
                 var count = 0;
-                for (let i = 0; i < new_vids.length; i++) {
+                for (var i = 0; i < new_vids.length; i++) {
                     if(!(videos.includes(new_vids[i])))
                     {
                         videos[videos.length] = new_vids[i];
@@ -91,8 +90,8 @@ export function Append()
                         count++;  
                     }       
                 }
-                console.log(videos)
-                console.log(titles)
+                console.log(titles);
+                console.log(count);
                 if(!isInvalid(count))
                 {
                     setTitleList(titles);
