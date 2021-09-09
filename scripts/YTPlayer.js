@@ -28,12 +28,12 @@ export function isInvalid(numVideos)
     return false;
 }
 
-function GetVideos()
+export function GetVideos()
 {
     return videoList;
 }
 
-function GetTitles()
+export function GetTitles()
 {
     return titleList;
 }
