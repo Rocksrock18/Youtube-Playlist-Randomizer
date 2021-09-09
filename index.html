@@ -12,11 +12,11 @@
     <div class="ControlPanel">
       <h1>Controls</h1>
       <hr></hr>
-      <p>- Enter the playlist id for the playlist you would like to shuffle, then hit "Randomize".
+      <p>- Enter the url for the playlist you would like to shuffle, then hit "Randomize".
         <b> It'll take a few seconds to load the playlist.</b></p>
       <p>- Don't like the order? Hit "Reshuffle" to change the order again.</p>
       <div class="PlaylistContainer">
-        <label class="PlLabel">Playlist ID:</label>
+        <label class="PlLabel">Playlist URL:</label>
         <input type="text" id="pl"></input>
       </div>
       <div class="ButtonContainer">
@@ -25,7 +25,7 @@
       </div>
       <br>
       <hr class="SubtleHR"></hr>
-      <p>- If you have additional playlists you want to play, you can enter the id below and hit "Append". The 
+      <p>- If you have additional playlists you want to play, you can enter the url below and hit "Append". The 
         playlist will automatically be reshuffled. Read "Important Information" for more info.
       </p>
       <div class="PlaylistContainer">
@@ -44,27 +44,21 @@
     </div>
 
     <div class="InfoPanel">
-      <h1>Important Information</h1>
-      <hr></hr>
-      <p>Only the first 100 videos of a given playlist will be generated. This means if you want to shuffle a playlist with more,
-        you'll need to split the playlist into 100 video chunks and append them. Youtube doesn't currently have a built in way to 
-        split playlists, but copying a playlist into a new one and deleting the first 100 videos will do the trick. 
-        This is of course tedious, but only needs to be done once. 
-      </p>
       <div class="FAQPanel">
         <h2>FAQ</h2>
         <hr></hr>
-        <p>What is a playlist ID? How can I find it?</p>
-        <p>Youtube gives every playlist a unique ID upon creation. To find it, navigate to the youtube page of your playlist. 
-          At the end of the url, you should see "list=[playlistID]". <label class="ExampleLabel" onclick="Example()">Show me an example</label></p>
+        <p>How can I access the playlist url?</p>
+        <p>Just navigate to the youtube page of your playlist. The url should look something like ". <label class="ExampleLabel" onclick="Example()">this</label>.</p>
+        <hr class="SubtleHR"></hr>
+        <p>Will the site remember where I was previously?</p>
+        <p>Yes! This website uses cookies to store your most recent playlist and where you were in that playlist. Hitting "Resume" will load your stored information.</p>
+        <hr class="SubtleHR"></hr>
+        <p>How big can the playlist be?</p>
+        <p>This tool can handle playlists of any size. It may just take a bit longer to load initially.</p>
         <hr class="SubtleHR"></hr>
         <p>Why does it tell me there are no videos in the playlist?</p>
-        <p>It's likely that you entered an invalid playlist id; copy paste the id from your playlist page and try again. Also, keep in 
+        <p>It's likely that you entered an invalid playlist url; copy paste the url from your playlist page and try again. Also, keep in 
           mind that certain playlists are not accessible. YouTube auto-generated playlists and private playlists cannot be played.</p>
-        <hr class="SubtleHR"></hr>
-        <p>It keeps telling me the server connection failed. How do I fix this?</p>
-        <p>Most often, this happens when the playlist has a private video in it. Private videos cannot be accessed, so the request will get blocked and the connection will fail.
-          The easiest fix is to simply copy the playlist into a fresh one and delete the private videos.</p>
         <hr class="SubtleHR"></hr>
         <p>I want to skip to a certain video in the playlist. How can I do this?</p>
         <p>Find which video you want to skip to in the video list, and click on it.</p>
