@@ -5,7 +5,6 @@ var titleList = [];
 var nextVideo;
 var index;
 var listLength;
-var player;
 var prevIndex;
 
 export function isInvalid(numVideos)
@@ -60,7 +59,7 @@ export function playNextVideo(vid)
     var index = findIndexByID(vid);
     if(index != -1)
     {
-        player.loadVideoById(vid);
+        window.player.loadVideoById(vid);
         var currVid = document.getElementById("currentvideolabel");
         currVid.innerHTML = "<b>Current Video:</b>     " + (index+1) + ". " + titleList[index];
         ChangeCurrentVideo(vid);
