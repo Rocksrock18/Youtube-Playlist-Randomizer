@@ -1,6 +1,8 @@
+import {destroyQueue, isInvalid, setTitleList, setVideoList, initializeQueue, resetCurrentVid, GetVideos, GetTitles} from 'YTPlayer.js';
+
 var busy = false;
 
-function Randomize()
+export function Randomize()
 {
     if(!busy)
     {
@@ -34,7 +36,7 @@ function Randomize()
     }
 }
 
-function Reshuffle()
+export function Reshuffle()
 {
     if(!busy)
     {
@@ -59,7 +61,7 @@ function Reshuffle()
     }
 }
 
-function Append()
+export function Append()
 {
     if(!busy)
     {
