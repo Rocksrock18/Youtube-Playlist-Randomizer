@@ -12,9 +12,9 @@ function ReadCookie(key)
 
 function ResumePlay()
 {
-    vl = ReadCookie("videos");
-    tl = ReadCookie("titles");
-    current_id = ReadCookie("id");
+    var vl = ReadCookie("videos");
+    var tl = ReadCookie("titles");
+    var current_id = ReadCookie("id");
     typeof tl !== 'undefined' && setTitleList(tl);
     typeof vl !== 'undefined' && setVideoList(vl);
     typeof current_id !== 'undefined' && playNextVideo(current_id);
