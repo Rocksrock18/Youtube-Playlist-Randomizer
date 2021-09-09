@@ -3,10 +3,6 @@ import {destroyQueue, setTitleList, setVideoList, playNextVideo} from '../script
 
 export function SetCookie(key, value)
 {
-    console.log("In set cookie");
-    console.log(value);
-    console.log(key);
-    console.log(ReadCookie(key));
     Cookies.remove(key);
     Cookies.set(key, JSON.stringify(value));
 }
@@ -18,8 +14,9 @@ export function ReadCookie(key)
 
 export function ResumePlay()
 {
+    Cookies.set("titles", "Hello world!");
     var vl = ReadCookie("videos");
-    var tl = ReadCookie("big_test");
+    var tl = ReadCookie("titles");
     var current_id = ReadCookie("id");
     console.log(vl)
     console.log(tl)
