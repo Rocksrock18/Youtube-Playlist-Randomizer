@@ -8,7 +8,7 @@ export function SetCookie(key, value)
 
 export function ReadCookie(key)
 {
-    return JSON.parse(Cookies.get(key));
+    return Cookies.get(key);
 }
 
 export function ResumePlay()
@@ -19,8 +19,8 @@ export function ResumePlay()
     console.log(vl)
     console.log(tl)
     console.log(current_id)
-    typeof tl !== 'undefined' && setTitleList(tl);
-    typeof vl !== 'undefined' && setVideoList(vl);
-    typeof current_id !== 'undefined' && playNextVideo(current_id);
+    typeof tl !== 'undefined' && setTitleList(JSON.parse(tl));
+    typeof vl !== 'undefined' && setVideoList(JSON.parse(vl));
+    typeof current_id !== 'undefined' && playNextVideo(JSON.parse(current_id));
 }
 window.ResumePlay = ResumePlay;
