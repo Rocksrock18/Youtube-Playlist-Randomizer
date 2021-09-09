@@ -3,7 +3,7 @@ import {destroyQueue, setTitleList, setVideoList, playNextVideo} from '../script
 
 export function SetCookie(key, value)
 {
-    localStorage.setItem(key, value)
+    localStorage.setItem(key, JSON.stringify(value))
     //Cookies.set(key, JSON.stringify(value));
 }
 
@@ -22,8 +22,8 @@ export function ResumePlay()
     console.log(vl)
     console.log(tl)
     console.log(current_id)
-    typeof tl !== 'undefined' && setTitleList(tl);
-    typeof vl !== 'undefined' && setVideoList(vl);
-    typeof current_id !== 'undefined' && playNextVideo(current_id);
+    typeof tl !== 'undefined' && setTitleList(JSON.parse(tl));
+    typeof vl !== 'undefined' && setVideoList(JSON.parse(vl));
+    typeof current_id !== 'undefined' && playNextVideo(JSON.parse(current_id));
 }
 window.ResumePlay = ResumePlay;
