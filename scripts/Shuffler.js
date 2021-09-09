@@ -80,6 +80,8 @@ export function Append()
                 console.log(titles)
                 var new_vids = data["videos"];
                 var new_titles = data["titles"];
+                console.log(new_vids)
+                console.log(new_titles)
                 var count = 0;
                 for (let i = 0; i < new_vids.length; i++) {
                     if(!(videos.includes(new_vids[i])))
@@ -89,6 +91,8 @@ export function Append()
                         count++;  
                     }       
                 }
+                console.log(videos)
+                console.log(titles)
                 if(!isInvalid(count))
                 {
                     setTitleList(titles);
@@ -99,8 +103,6 @@ export function Append()
                     initializeQueue();
                     resetCurrentVid();
                 }
-                console.log(videos)
-                console.log(titles)
             },
             error: function () {
                 busy = false;
