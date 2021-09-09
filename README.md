@@ -25,15 +25,14 @@ However, recently authorization failure started happening on every request. This
 
 1. The site takes in a playlist id, and generates the source page of the playlist entered.
 2. The source page is parsed in order to find the video id's and titles of each video in the playlist.
-   - By default, the source page only generates the first 100 videos in the playlist.
 3. Each video is compiled into a list and then placed in a random order.
    - The order can be reshuffled at any time.
 4. Additional playlists can be appended to the list, and the order will be shuffled again.
 
 ## Accessibility
 
-Certain playlists/videos cannot be accessed due to their privacy level. Any playlist that is **private**,
-or that **has a private video in it**, cannot be played.
+Certain playlists/videos cannot be accessed due to their privacy level. Any video or playlist that is **private**,
+cannot be played.
 
 * **Note:** Sometimes YouTube will auto-generate playlists for a user. These are not recognized as "official" playlists, and hence cannot
 be accessed.
