@@ -3,12 +3,12 @@ import {setTitleList, setVideoList, playNextVideo} from '../scripts/YTPlayer.js'
 
 export function SetCookie(key, value)
 {
-    Cookies.set(key, value);
+    Cookies.set(key, JSON.stringify(value));
 }
 
 export function ReadCookie(key)
 {
-    return Cookies.get(key);
+    return JSON.parse(Cookies.get(key));
 }
 
 export function ResumePlay()
