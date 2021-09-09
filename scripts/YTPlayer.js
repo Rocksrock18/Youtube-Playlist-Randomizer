@@ -125,10 +125,7 @@ export function destroyQueue()
 export function setTitleList(t_list)
 {
     titleList = t_list;
-    console.log("Setting cookie");
-    console.log(t_list);
     SetCookie("titles", t_list);
-    console.log(ReadCookie("titles"))
 }
 
 export function Example()
