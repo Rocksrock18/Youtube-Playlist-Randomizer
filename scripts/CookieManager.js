@@ -1,15 +1,16 @@
+import Cookies from '../js.cookie.mjs'
 
-function SetCookie(key, value)
+export function SetCookie(key, value)
 {
     Cookies.set(key, value);
 }
 
-function ReadCookie(key)
+export function ReadCookie(key)
 {
     return Cookies.get(key);
 }
 
-function ResumePlay()
+export function ResumePlay()
 {
     var vl = ReadCookie("videos");
     var tl = ReadCookie("titles");
