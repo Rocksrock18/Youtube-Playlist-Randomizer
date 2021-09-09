@@ -1,4 +1,4 @@
-import Cookies from '/path/to/js.cookie.mjs'
+import Cookies from 'js.cookie.mjs'
 
 Cookies.set('foo', 'bar')
 
