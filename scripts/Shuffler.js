@@ -6,10 +6,10 @@ function Randomize()
     {
         busy = true;
         destroyQueue();
-        var playlistID = document.getElementById('pl').value;
-        var link = 'https://youtubeplaylistrandomizer.azurewebsites.net/api/values?playlistID='+playlistID;
+        var url = document.getElementById('pl').value;
+        var link = 'https://yt-playlist-randomizer.herokuapp.com/api?url='+url;
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             url: link,
             success: function(data){
                 busy = false;
