@@ -1,5 +1,5 @@
 import Cookies from '../js.cookie.mjs'
-import {setTitleList, setVideoList, playNextVideo} from 'YTPlayer.js';
+import {setTitleList, setVideoList, playNextVideo} from '/YTPlayer.js';
 
 export function SetCookie(key, value)
 {
