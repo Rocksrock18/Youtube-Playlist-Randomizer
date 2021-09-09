@@ -1,6 +1,5 @@
 import {SetCookie, ReadCookie} from '../scripts/CookieManager.js';
 import {Reshuffle} from '../scripts/Shuffler.js';
-import YT from 'https://www.youtube.com/player_api';
 var videoList = [];
 var titleList = [];
 var nextVideo;
@@ -8,17 +7,6 @@ var index;
 var listLength;
 var player;
 var prevIndex;
-
-function onYouTubePlayerAPIReady() {
-    player = new YT.Player('player', {
-      height: '390',
-      width: '640',
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-}
 
 export function isInvalid(numVideos)
 {
