@@ -19,6 +19,7 @@ function Randomize()
                 {
                     setTitleList(titles);
                     setVideoList(videos);
+                    Reshuffle();
                 }
                 else{
                     initializeQueue();
