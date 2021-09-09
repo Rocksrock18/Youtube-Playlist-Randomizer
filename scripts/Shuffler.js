@@ -103,3 +103,6 @@ export function Append()
         });
     }
 }
+window.Reshuffle = Reshuffle
+window.Randomize = Randomize
+window.Append = Append
