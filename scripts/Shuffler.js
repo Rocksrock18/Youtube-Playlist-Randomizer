@@ -1,4 +1,4 @@
-import {destroyQueue, isInvalid, setTitleList, setVideoList, initializeQueue, resetCurrentVid, GetVideos, GetTitles} from 'YTPlayer.js';
+import {destroyQueue, isInvalid, setTitleList, setVideoList, initializeQueue, resetCurrentVid, GetVideos, GetTitles} from '/YTPlayer.js';
 
 var busy = false;
 
