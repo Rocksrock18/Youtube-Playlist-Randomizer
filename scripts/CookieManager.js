@@ -16,10 +16,10 @@ export function ResumePlay()
     var vl = ReadCookie("videos");
     var tl = ReadCookie("titles");
     var current_id = ReadCookie("id");
+    console.log(vl)
+    console.log(tl)
+    console.log(current_id)
     typeof tl !== 'undefined' && setTitleList(tl);
     typeof vl !== 'undefined' && setVideoList(vl);
     typeof current_id !== 'undefined' && playNextVideo(current_id);
 }
-
-ResumePlay();
-console.log(Cookies.get())
