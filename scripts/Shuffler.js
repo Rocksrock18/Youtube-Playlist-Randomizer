@@ -80,7 +80,7 @@ export function Append()
                 var new_titles = data["titles"];
                 var count = 0;
                 for (let i = 0; i < new_vids.length; i++) {
-                    if(!(videos.includes(key)))
+                    if(!(videos.includes(new_vids[i])))
                     {
                         videos[videos.length] = new_vids[i];
                         titles[titles.length] = new_titles[i];
