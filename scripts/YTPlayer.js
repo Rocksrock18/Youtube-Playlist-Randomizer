@@ -3,7 +3,6 @@ import {Reshuffle} from '../scripts/Shuffler.js';
 var videoList = [];
 var titleList = [];
 var nextVideo;
-var index;
 var listLength;
 var prevIndex;
 
@@ -43,8 +42,8 @@ function findIndexByID(vid)
 function skipToVideo(e)
 {
     var vid = e.target.id;
-    index = findIndexByID(vid);
-    if(index == -1)
+    window.index = findIndexByID(vid);
+    if(window.index == -1)
     {
         alert("Error: Video not found");
     }
@@ -56,8 +55,8 @@ function skipToVideo(e)
 
 export function playNextVideo(vid)
 {
-    var index = findIndexByID(vid);
-    if(index != -1)
+    window.index = findIndexByID(vid);
+    if(window.index != -1)
     {
         window.player.loadVideoById(vid);
         var currVid = document.getElementById("currentvideolabel");
@@ -83,8 +82,8 @@ export function setVideoList(vl)
     videoList = vl;
     SetCookie("videos", vl)
     listLength = videoList.length;
-    index = 0;
-    nextVideo = videoList[index];
+    window.index = 0;
+    nextVideo = videoList[0];
     initializeQueue();
     playNextVideo(nextVideo);
 }
@@ -114,7 +113,7 @@ export function initializeQueue()
 
 export function destroyQueue()
 {
-    prevIndex = index;
+    prevIndex = window.index;
     var ol = document.getElementById("dynlist");
     for(var i = 0; i < videoList.length; i++)
     {
