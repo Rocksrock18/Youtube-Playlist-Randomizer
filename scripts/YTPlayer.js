@@ -1,4 +1,5 @@
 import {SetCookie, ReadCookie} from 'CookieManager.js';
+import {Reshuffle} from 'Shuffler.js';
 var videoList = [];
 var titleList = [];
 var nextVideo;
