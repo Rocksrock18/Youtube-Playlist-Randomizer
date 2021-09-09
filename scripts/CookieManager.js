@@ -23,3 +23,4 @@ export function ResumePlay()
     typeof vl !== 'undefined' && setVideoList(vl);
     typeof current_id !== 'undefined' && playNextVideo(current_id);
 }
+window.ResumePlay = ResumePlay;
