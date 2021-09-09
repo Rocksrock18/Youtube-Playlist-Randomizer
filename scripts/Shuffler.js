@@ -67,21 +67,23 @@ export function Append()
     {
         busy = true;
         destroyQueue();
-        var playlistID = document.getElementById('apl').value;
-        var link = 'https://youtubeplaylistrandomizer.azurewebsites.net/api/values?playlistID='+playlistID;
+        var url = document.getElementById('apl').value;
+        var link = 'https://yt-playlist-randomizer.herokuapp.com/api?url='+url;
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             url: link,
             success: function(data){
                 busy = false;
                 var videos = GetVideos();
                 var titles = GetTitles();
+                var new_vids = data["videos"];
+                var new_titles = data["titles"];
                 var count = 0;
-                for(var key in data) {
+                for (let i = 0; i < new_vids.length; i++) {
                     if(!(videos.includes(key)))
                     {
-                        videos[videos.length] = key;
-                        titles[titles.length] = data[key];
+                        videos[videos.length] = new_vids[i];
+                        titles[titles.length] = new_titles[i];
                         count++;  
                     }       
                 }
