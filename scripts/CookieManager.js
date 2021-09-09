@@ -1,5 +1,5 @@
 import Cookies from '../js.cookie.mjs'
-import {setTitleList, setVideoList, playNextVideo} from '../scripts/YTPlayer.js';
+import {destroyQueue, setTitleList, setVideoList, playNextVideo} from '../scripts/YTPlayer.js';
 
 export function SetCookie(key, value)
 {
@@ -19,6 +19,7 @@ export function ResumePlay()
     console.log(vl)
     console.log(tl)
     console.log(current_id)
+    destoryQueue()
     typeof tl !== 'undefined' && setTitleList(JSON.parse(tl));
     typeof vl !== 'undefined' && setVideoList(JSON.parse(vl));
     typeof current_id !== 'undefined' && playNextVideo(JSON.parse(current_id));
