@@ -1,9 +1,8 @@
 import {SetCookie, ReadCookie} from '../scripts/CookieManager.js';
 import {Reshuffle} from '../scripts/Shuffler.js';
-var videoList = [];
+window.videoList = [];
 var titleList = [];
 var nextVideo;
-var listLength;
 var prevIndex;
 
 export function isInvalid(numVideos)
@@ -18,7 +17,7 @@ export function isInvalid(numVideos)
 
 export function GetVideos()
 {
-    return videoList;
+    return window.videoList;
 }
 
 export function GetTitles()
@@ -28,9 +27,9 @@ export function GetTitles()
 
 function findIndexByID(vid)
 {
-    for(var i = 0; i < videoList.length; i++)
+    for(var i = 0; i < window.videoList.length; i++)
     {
-        var video = videoList[i];
+        var video = window.videoList[i];
         if(video === vid)
         {
             return i;
@@ -79,18 +78,18 @@ function ChangeCurrentVideo(vid)
 
 export function setVideoList(vl)
 {
-    videoList = vl;
+    window.videoList = vl;
     SetCookie("videos", vl)
-    listLength = videoList.length;
+    window.listLength = videoList.length;
     window.index = 0;
-    nextVideo = videoList[0];
+    nextVideo = window.videoList[0];
     initializeQueue();
     playNextVideo(nextVideo);
 }
 
 export function resetCurrentVid()
 {
-    var vid = videoList[prevIndex];
+    var vid = window.videoList[prevIndex];
     if(vid != undefined)
     {
         var listElement = document.getElementById(vid);
@@ -104,7 +103,7 @@ export function initializeQueue()
     for(var i = 0; i < titleList.length; i++)
     {
         var li = document.createElement("li");
-        li.setAttribute('id', videoList[i]);
+        li.setAttribute('id', window.videoList[i]);
         li.addEventListener("click", skipToVideo);
         li.appendChild(document.createTextNode(titleList[i]));
         ol.appendChild(li);
@@ -115,9 +114,9 @@ export function destroyQueue()
 {
     prevIndex = window.index;
     var ol = document.getElementById("dynlist");
-    for(var i = 0; i < videoList.length; i++)
+    for(var i = 0; i < window.videoList.length; i++)
     {
-        var li = document.getElementById(videoList[i]);
+        var li = document.getElementById(window.videoList[i]);
         ol.removeChild(li);
     }
 }
