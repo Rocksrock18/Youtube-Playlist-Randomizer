@@ -124,7 +124,7 @@ export function destroyQueue()
 export function setTitleList(t_list)
 {
     titleList = t_list;
-    SetCookie("big_test", t_list);
+    SetCookie("titles", t_list);
 }
 
 export function Example()
