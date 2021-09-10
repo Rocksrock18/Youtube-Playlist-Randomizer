@@ -3,6 +3,7 @@ import {destroyQueue, setTitleList, setVideoList, playNextVideo} from '../script
 
 export function SetCookie(key, value)
 {
+    console.log(JSON.stringify(value))
     localStorage.setItem(key, JSON.stringify(value))
     //Cookies.set(key, JSON.stringify(value));
 }
