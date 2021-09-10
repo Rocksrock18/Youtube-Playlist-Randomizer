@@ -19,9 +19,6 @@ export function ResumePlay()
     var vl = ReadCookie("videos");
     var tl = ReadCookie("titles");
     var current_id = ReadCookie("id");
-    console.log(vl)
-    console.log(tl)
-    console.log(current_id)
     destroyQueue()
     typeof tl !== 'undefined' && setTitleList(JSON.parse(tl));
     typeof vl !== 'undefined' && setVideoList(JSON.parse(vl));
